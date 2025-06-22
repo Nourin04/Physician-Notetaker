@@ -81,5 +81,9 @@ def task3():
     return Response(json.dumps(ordered, indent=2), mimetype='application/json')
 
 
+import os
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's port env variable, fallback 5000
+    app.run(host="0.0.0.0", port=port, debug=True)
+
