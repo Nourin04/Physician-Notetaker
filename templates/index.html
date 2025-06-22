@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🩺 Physician Notetaker</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 26px;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #34495e;
+    }
+
+    select,
+    textarea {
+      width: 100%;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 140px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #3b82f6;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+
+    h2 {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #2c3e50;
+    }
+
+    pre {
+      background-color: #f8fafc;
+      padding: 15px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      border: 1px solid #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🩺 Physician Notetaker</h1>
+
+    <label for="task">Choose Task:</label>
+    <select id="task">
+      <option value="task1">🧬 Task 1 – Extract Medical Info</option>
+      <option value="task2">💬 Task 2 – Sentiment & Intent</option>
+      <option value="task3">📄 Task 3 – SOAP Note</option>
+    </select>
+
+    <label for="inputText">Paste your transcript below:</label>
+    <textarea id="inputText" rows="6" placeholder="e.g. Patient: I’ve been feeling tired..."></textarea>
+
+    <button id="analyzeBtn">Analyze</button>
+
+    <h2>📊 Result:</h2>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+   document.getElementById("analyzeBtn").addEventListener("click", async () => {
+  const task = document.getElementById("task").value;
+  const input = document.getElementById("inputText").value;
+  const outputBox = document.getElementById("output");
+
+  outputBox.textContent = "⏳ Processing...";
+
+  try {
+    const response = await fetch(`/api/${task}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ input: input })
+    });
+
+    const data = await response.json();
+
+    // ✅ Use the whole object directly
+    outputBox.textContent = JSON.stringify(data, null, 2);
+
+  } catch (error) {
+    outputBox.textContent = "❌ Error communicating with server.";
+    console.error(error);
+  }
+});
+
+  </script>
+</body>
+</html>
