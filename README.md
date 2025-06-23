@@ -7,6 +7,14 @@ This was built and deployed using the **Groq API with LLaMA 3** for inference, s
 ---
 
 ## 🩺 Sample Use Case
+### Deployed Link: https://physician-notetaker-j2fd.onrender.com/
+
+![image](https://github.com/user-attachments/assets/7f38381b-1d57-48d4-9260-a9d04b446a3d)
+![image](https://github.com/user-attachments/assets/1bcdb7ec-003e-406f-9843-fb054fab0a2e)
+![image](https://github.com/user-attachments/assets/18cc6b5b-9654-45b4-99ba-d13823e45d46)
+
+
+
 
 A physician-patient conversation is passed to the system, and the app:
 
