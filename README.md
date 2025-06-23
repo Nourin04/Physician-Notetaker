@@ -20,7 +20,7 @@ A physician-patient conversation is passed to the system, and the app:
 
 * Extracts key medical details (like symptoms, diagnosis, treatment, etc.)
 * Analyzes the patient's **sentiment** and **intent**
-* Optionally generates a **structured SOAP note**
+* Generates a **structured SOAP note**
 
 ---
 
