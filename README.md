@@ -74,6 +74,13 @@ Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional b
 * Sentiment Classification: `Anxious`, `Neutral`, `Reassured`
 * Intent Detection: e.g., `Seeking reassurance`, `Expressing concern`, etc.
 
+
+**Sample Input:**
+```
+"I'm a bit worried about my back pain, but I hope it gets better soon."
+
+```
+
 **Sample Output:**
 
 ```json
@@ -100,6 +107,15 @@ Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional b
 * Structured fields: `Subjective`, `Objective`, `Assessment`, and `Plan`
 * Each with nested fields like `Chief_Complaint`, `Diagnosis`, `Follow_Up`, etc.
 
+**Sample Input:**
+
+```
+Doctor: How are you feeling today?
+Patient: I had a car accident. My neck and back hurt a lot for four weeks.
+Doctor: Did you receive treatment?
+Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional back pain.
+
+```
 **Sample Output:**
 
 ```json
