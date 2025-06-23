@@ -36,6 +36,14 @@ A physician-patient conversation is passed to the system, and the app:
 * Conversion to JSON with fields: `Patient_Name`, `Current_Status`, etc.
 * Done via carefully crafted prompts to the Groq-hosted LLaMA 3 model.
 
+**Sample Input:**
+
+```
+Doctor: How are you feeling today?
+Patient: I had a car accident. My neck and back hurt a lot for four weeks.
+Doctor: Did you receive treatment?
+Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional back pain.
+```
 **Sample Output:**
 
 ```json
