@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from groq_config import extract_info, analyze_patient_input, generate_soap_note
-import json  # ✅ import this
+import json  
 from collections import OrderedDict
 
 app = Flask(__name__)
