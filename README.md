@@ -24,7 +24,7 @@ A physician-patient conversation is passed to the system, and the app:
 
 ---
 
-## 🧠 Tasks Implemented
+##  Tasks Implemented
 
 ### ✅ Task 1: Medical NLP Summarization
 
@@ -158,7 +158,7 @@ Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional b
 
 ---
 
-## 🧪 Technologies Used
+##  Technologies Used
 
 | Component       | Tech Stack               |
 | --------------- | ------------------------ |
@@ -170,7 +170,7 @@ Patient: Yes, I had ten physiotherapy sessions, and now I only have occasional b
 
 ---
 
-## 🚀 How to Run Locally
+##  How to Run Locally
 
 1. Clone the repo
 
@@ -216,9 +216,9 @@ python app.py
 
 ## ✍️ Authors & Acknowledgements
 
-* 💡 Prompt Engineering: Done manually for Groq's LLaMA 3 to enforce structured outputs
-* 🧪 Tested and evaluated on synthetic and real-world transcripts
-* ⚙️ Inspired by EMR automation in clinical NLP research
+*  Prompt Engineering: Done manually for Groq's LLaMA 3 to enforce structured outputs
+*  Tested and evaluated on synthetic and real-world transcripts
+*  Inspired by EMR automation in clinical NLP research
 
 ---
 
