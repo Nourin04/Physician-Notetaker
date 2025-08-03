@@ -214,7 +214,7 @@ python app.py
 
 ---
 
-## ✍️ Authors & Acknowledgements
+##  Authors & Acknowledgements
 
 *  Prompt Engineering: Done manually for Groq's LLaMA 3 to enforce structured outputs
 *  Tested and evaluated on synthetic and real-world transcripts
