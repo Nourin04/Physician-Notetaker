@@ -1,6 +1,6 @@
 # Physician Notetaker
 
-👋 Welcome! This project implements an AI-powered pipeline for **medical transcription understanding, NLP-based summarization, sentiment analysis**, and **SOAP note generation** from doctor-patient conversations.
+This project implements an AI-powered pipeline for **medical transcription understanding, NLP-based summarization, sentiment analysis**, and **SOAP note generation** from doctor-patient conversations.
 
 This was built and deployed using the **Groq API with LLaMA 3** for inference, served through a **Flask app**, and deployed on **Render**.
 
